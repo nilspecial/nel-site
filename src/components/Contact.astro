@@ -1,0 +1,70 @@
+<section id="contact" style="background:white; padding:80px 24px;">
+  <div class="container" style="max-width:640px; margin:0 auto;">
+    
+    <h2 style="color:var(--accent); text-align:center;">
+      Starte dein Training
+    </h2>
+
+    <p style="text-align:center; color:var(--text-secondary); margin-bottom:16px;">
+      Schreib mir ein paar Zeilen zu dir, deinem aktuellen Trainingsstand
+      und deinen Zielen.
+    </p>
+
+    <!-- Ablauf / Vertrauen -->
+    <div
+      style="
+        background:#f8fafc;
+        border-radius:8px;
+        padding:16px;
+        margin-bottom:32px;
+        font-size:14px;
+        color:var(--text-secondary);
+      "
+    >
+      <strong>So geht es weiter:</strong>
+      <ol style="padding-left:18px; margin:8px 0 0;">
+        <li>Du sendest mir deine Anfrage</li>
+        <li>Ich melde mich persönlich bei dir zurück</li>
+        <li>Wir klären gemeinsam, welches Coaching für dich passt</li>
+      </ol>
+      <p style="margin:8px 0 0;">
+        💡 Unverbindlich & ohne Verpflichtung.
+      </p>
+    </div>
+
+    <!-- Formular -->
+    <form
+      action="https://formspree.io/f/mnqxyzab"
+      method="POST"
+      style="display:flex; flex-direction:column; gap:16px;"
+    >
+      <input
+        type="text"
+        name="name"
+        placeholder="Dein Name"
+        required
+        style="padding:12px; border-radius:6px; border:1px solid #ccc;"
+      />
+
+      <input
+        type="email"
+        name="email"
+        placeholder="Deine E-Mail-Adresse"
+        required
+        style="padding:12px; border-radius:6px; border:1px solid #ccc;"
+      />
+
+      <textarea
+        name="message"
+        placeholder="Kurz zu dir: Laufniveau, Ziele, Wettkämpfe, Zeit pro Woche …"
+        rows="5"
+        required
+        style="padding:12px; border-radius:6px; border:1px solid #ccc;"
+      ></textarea>
+
+      <button type="submit">
+        Unverbindliche Anfrage senden
+      </button>
+    </form>
+  </div>
+</section>
