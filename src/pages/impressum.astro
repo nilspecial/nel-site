@@ -24,9 +24,8 @@ import Layout from '../layouts/Layout.astro';
 
     <p>
       <strong>Haftung für Inhalte</strong><br />
-      Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt.
-      Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte
-      können wir jedoch keine Gewähr übernehmen.
+      Die Inhalte dieser Website wurden mit größter Sorgfalt erstellt. Für die Richtigkeit,
+      Vollständigkeit und Aktualität der Inhalte kann jedoch keine Gewähr übernommen werden.
     </p>
 
     <!-- Zurück Button -->
@@ -36,6 +35,16 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <style>
+    h1 {
+      margin-bottom:32px;
+    }
+
+    p {
+      color:var(--text-secondary);
+      line-height:1.6;
+      margin-bottom:16px;
+    }
+
     .cta {
       background:var(--accent);
       color:white;
@@ -43,6 +52,7 @@ import Layout from '../layouts/Layout.astro';
       border-radius:6px;
       font-weight:500;
       display:inline-block;
+      text-decoration:none;
     }
 
     @media(max-width:768px){

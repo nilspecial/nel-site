@@ -1,43 +1,104 @@
-<footer
-  style="
-    background:white;
-    border-top:1px solid #e5e7eb;
-    padding:48px 24px;
-  "
->
-  <div
-    class="container"
-    style="
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:space-between;
-      align-items:center;
-      gap:24px;
-    "
-  >
-    <!-- Branding -->
-    <p style="margin:0; color:var(--text-secondary);">
-      © 2026 Nils Endurance Lab
-    </p>
+<footer style="background:white; padding:16px 24px;">
+  <div class="footer-container">
 
-    <!-- Rechtliches -->
-    <div style="display:flex; gap:16px;">
-<a href="/impressum">Impressum</a>
-<a href="/disclaimer">Disclaimer</a>
+    <!-- Logo + Text -->
+    <div class="logo-text">
+      <img src="/logo.png" alt="Logo" />
+      <span>Nils Endurance Lab</span>
     </div>
 
-    <!-- CTA -->
-    <a
-      href="#contact"
-      style="
-        background:var(--accent);
-        color:white;
-        padding:12px 20px;
-        border-radius:6px;
-        font-weight:500;
-      "
-    >
-      Starte dein Training jetzt
-    </a>
+    <!-- Footer-Links -->
+    <nav class="footer-nav">
+      <a href="/impressum">Impressum</a>
+      <a href="/datasec">Datenschutz</a>
+      <a href="/disclaimer">Disclaimer</a>
+    </nav>
+
   </div>
 </footer>
+
+<style>
+.footer-container {
+  max-width:1100px;
+  margin:0 auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:16px;
+  flex-wrap:wrap; /* erlaubt Zeilenumbruch bei extrem schmalen Screens */
+}
+
+.logo-text {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  flex-shrink:1;
+  min-width:0;
+  justify-content:flex-start;
+}
+
+.logo-text img {
+  height:48px;
+  width:auto;
+  object-fit:contain;
+  flex-shrink:0;
+}
+
+.logo-text span {
+  font-family:'Space Grotesk', sans-serif;
+  font-weight:700;
+  font-size:1.2rem;
+  color:#2563eb;
+  white-space:nowrap; /* verhindert Zeilenumbruch */
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.footer-nav {
+  display:flex;
+  gap:24px;
+  flex-wrap:wrap; /* erlaubt Umbrechen, falls nötig */
+}
+
+.footer-nav a {
+  color:var(--text-primary);
+  text-decoration:none;
+  font-weight:500;
+  font-size:1rem;
+  white-space:nowrap; /* Links bleiben nebeneinander */
+}
+
+/* Mobile: Logo+Text zentriert, Links darunter, nebeneinander */
+@media(max-width:768px){
+  .footer-container {
+    flex-direction:column;
+    align-items:center;
+    gap:12px;
+  }
+
+  .logo-text {
+    justify-content:center;
+    text-align:center;
+  }
+
+  .footer-nav {
+    justify-content:center;
+    gap:16px;
+    width:100%;
+    flex-wrap:nowrap; /* Links bleiben nebeneinander */
+    overflow-x:auto;   /* erlaubt Scroll nur für Links, falls extrem schmal */
+  }
+
+  .footer-nav::-webkit-scrollbar {
+    display:none; /* Scrollbar ausblenden */
+  }
+}
+
+/* Optional: Extra schmal <420px */
+@media(max-width:420px){
+  .footer-nav {
+    justify-content:center;
+    gap:12px;
+  }
+}
+</style>

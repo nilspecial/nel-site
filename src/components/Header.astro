@@ -1,29 +1,92 @@
-<header style="background:white; padding:24px 0; box-shadow:0 2px 8px rgba(0,0,0,0.05); position:sticky; top:0; z-index:1000;">
-  <div class="container" style="max-width:1100px; margin:0 auto; display:flex; justify-content:space-between; align-items:center;">
-    <!-- Logo / Brand -->
-    <div class="logo" style="font-weight:700; font-size:1.5rem; color:var(--accent);">
-      Nils Endurance Lab
+<header style="background:white; padding:8px 16px;">
+  <div class="header-container">
+
+    <!-- Logo + Text -->
+    <div class="logo-text">
+      <img src="/logo.png" alt="Logo" />
+      <span>Nils Endurance Lab</span>
     </div>
 
-    <!-- Navigation -->
-    <nav>
-      <ul style="display:flex; gap:32px; list-style:none; margin:0; padding:0;">
-        <li><a href="#hero" style="text-decoration:none; color:#1e293b;">Start</a></li>
-        <li><a href="#about" style="text-decoration:none; color:#1e293b;">Über mich</a></li>
-        <li><a href="#offers" style="text-decoration:none; color:#1e293b;">Angebote</a></li>
-        <li><a href="#faq" style="text-decoration:none; color:#1e293b;">FAQ</a></li>
-        <li><a href="#contact" style="text-decoration:none; color:#1e293b;">Kontakt</a></li>
-      </ul>
+    <!-- Navigation (nur Desktop) -->
+    <nav class="desktop-nav">
+      <a href="#about">Über mich</a>
+      <a href="#whycoaching">Warum Coaching</a>
+      <a href="#offers">Angebote</a>
+      <a href="#faq">FAQ</a>
     </nav>
-  </div>
 
-  <style>
-    a:hover { color:var(--accent); }
-    
-    @media(max-width:768px){
-      .container { flex-direction:column; gap:16px; }
-      nav ul { flex-direction:column; gap:12px; align-items:center; }
-      .logo { font-size:1.25rem; }
-    }
-  </style>
+    <!-- Kontakt Button -->
+    <a href="#contact" class="cta">Kontakt</a>
+
+  </div>
 </header>
+
+<style>
+.header-container {
+  max-width:1100px;
+  margin:0 auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:16px;
+}
+
+.logo-text {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  flex-shrink:1; /* erlaubt Text zu schrumpfen */
+  min-width:0;
+}
+
+.logo-text img {
+  height:48px;
+  flex-shrink:0;
+}
+
+.logo-text span {
+  font-family:'Space Grotesk', sans-serif;
+  font-weight:700;
+  font-size:1.2rem;
+  color:#2563eb;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.desktop-nav {
+  display:flex;
+  gap:24px;
+}
+
+.desktop-nav a {
+  color:var(--text-primary);
+  text-decoration:none;
+}
+
+.cta {
+  padding:8px 16px;
+  background:var(--accent);
+  color:white;
+  border-radius:8px;
+  font-weight:500;
+  text-decoration:none;
+  flex-shrink:0; /* Button schrumpft nicht */
+}
+
+/* Mobile: Menüpunkte ausblenden, alles in einer Reihe */
+@media(max-width:768px){
+  .desktop-nav {
+    display:none;
+  }
+
+  .logo-text span {
+    font-size:1rem;
+  }
+
+  .cta {
+    padding:6px 12px;
+    font-size:0.9rem;
+  }
+}
+</style>

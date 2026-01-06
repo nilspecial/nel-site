@@ -4,36 +4,97 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout>
   <section style="padding:80px 24px; max-width:800px; margin:0 auto;">
-    <h1>Disclaimer</h1>
+    <h1>Haftungsausschluss (Disclaimer)</h1>
 
+    <h2>1. Inhalte dieser Website</h2>
     <p>
-      Die angebotenen Coaching-Leistungen stellen keine medizinische Beratung dar.
-      Sie ersetzen weder ärztliche Diagnose noch Therapie.
+      Die Inhalte dieser Website dienen ausschließlich der allgemeinen Information rund um
+      Lauftraining, Coaching und Trainingsplanung. Sie stellen keine medizinische, therapeutische
+      oder sportmedizinische Beratung dar.
+    </p>
+    <p>
+      Trotz sorgfältiger Erstellung der Inhalte übernehme ich keine Gewähr für die Richtigkeit,
+      Vollständigkeit oder Aktualität der bereitgestellten Informationen.
     </p>
 
+    <h2>2. Training auf eigene Verantwortung</h2>
     <p>
-      Jede Teilnahme am Training erfolgt auf eigene Verantwortung.
-      Voraussetzung ist eine ausreichende gesundheitliche Eignung.
+      Die Umsetzung von Trainingsplänen, Übungen oder Empfehlungen erfolgt auf eigene
+      Verantwortung. Jede sportliche Betätigung birgt gesundheitliche Risiken.
+    </p>
+    <p>
+      Ich empfehle ausdrücklich, vor Beginn eines Trainingsprogramms eine ärztliche Untersuchung
+      durchführen zu lassen – insbesondere bei bestehenden Erkrankungen, Verletzungen oder
+      Unsicherheiten bezüglich der körperlichen Belastbarkeit.
     </p>
 
+    <h2>3. Keine Erfolgsgarantie</h2>
     <p>
-      Bei gesundheitlichen Beschwerden oder Vorerkrankungen wird empfohlen,
-      vor Trainingsbeginn ärztlichen Rat einzuholen.
+      Trainingserfolge hängen von zahlreichen individuellen Faktoren ab, unter anderem vom
+      gesundheitlichen Zustand, der Trainingskonsequenz, der Regeneration sowie äußeren
+      Lebensumständen.
     </p>
+    <p>
+      Eine Garantie für Leistungssteigerungen, Wettkampfergebnisse oder persönliche Bestzeiten
+      kann daher nicht gegeben werden.
+    </p>
+
+    <h2>4. Haftung für externe Links</h2>
+    <p>
+      Diese Website enthält Links zu externen Websites Dritter. Auf deren Inhalte habe ich keinen
+      Einfluss und übernehme hierfür keine Haftung.
+    </p>
+    <p>
+      Zum Zeitpunkt der Verlinkung waren keine rechtswidrigen Inhalte erkennbar. Eine permanente
+      inhaltliche Kontrolle der verlinkten Seiten ist ohne konkrete Anhaltspunkte einer
+      Rechtsverletzung nicht zumutbar.
+    </p>
+
+    <h2>5. Urheberrecht</h2>
+    <p>
+      Die auf dieser Website veröffentlichten Inhalte und Werke unterliegen dem deutschen
+      Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung oder sonstige Verwertung
+      außerhalb der Grenzen des Urheberrechts bedarf der vorherigen schriftlichen Zustimmung.
+    </p>
+
+    <!-- Zurück Button -->
     <div style="margin-top:48px;">
-  <a
-    href="/"
-    style="
-      display:inline-block;
-      padding:12px 24px;
-      border-radius:6px;
+      <a href="/" class="cta">← Zurück zur Startseite</a>
+    </div>
+  </section>
+
+  <style>
+    h1 {
+      margin-bottom:32px;
+    }
+
+    h2 {
+      margin-top:32px;
+      margin-bottom:8px;
+      font-size:1.2rem;
+    }
+
+    p {
+      color:var(--text-secondary);
+      line-height:1.6;
+      margin-bottom:12px;
+    }
+
+    .cta {
       background:var(--accent);
       color:white;
+      padding:12px 24px;
+      border-radius:6px;
       font-weight:500;
-    "
-  >
-    ← Zurück zur Startseite
-  </a>
-</div>
-  </section>
+      display:inline-block;
+      text-decoration:none;
+    }
+
+    @media(max-width:768px){
+      .cta {
+        width:100%;
+        text-align:center;
+      }
+    }
+  </style>
 </Layout>
